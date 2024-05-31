@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 
 import static com.runner.runner.run.Location.OUTDOOR;
@@ -19,7 +20,7 @@ public class RunnerApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(RunnerApplication.class, args);
-        System.out.println("Working...");
+        System.out.println("Reloaded at "+LocalTime.now());
     }
 
     @Bean

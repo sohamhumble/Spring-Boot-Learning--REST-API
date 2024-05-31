@@ -28,8 +28,20 @@ public class RunController {
         }
         return run.get();
     }
-
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping("")
     void create(@RequestBody Run run){
         runRepository.create(run);
+    }
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @PutMapping("/{id}")
+    void update(@RequestBody Run run,@PathVariable Integer id){
+        runRepository.update(run,id);
+    }
+
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping("/{id}")
+    void delete(Integer id){
+        runRepository.delete(id);
     }
 }
