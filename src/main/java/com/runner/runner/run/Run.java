@@ -11,8 +11,8 @@ public record Run(
         String title,
         LocalDateTime startedOn,
         LocalDateTime completedOn,
-        Integer miles,
         @Positive
+        Integer miles,
         Location location
 ) {
     public Run{

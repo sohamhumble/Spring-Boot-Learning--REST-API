@@ -1,6 +1,7 @@
 package com.runner.runner.run;
 
 import jakarta.annotation.PostConstruct;
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
